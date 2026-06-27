@@ -1,44 +1,90 @@
+/* ===========================
+   CLASSTAM GROUP HOLDING
+   PREMIUM WEBSITE V2
+=========================== */
+
 *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-
+html{
+    scroll-behavior:smooth;
 }
 
 body{
+    font-family:'Poppins',sans-serif;
+    background:#090909;
+    color:#fff;
+    overflow-x:hidden;
+}
 
-background:#000;
-overflow-x:hidden;
+/* HERO */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.70)),
+    url("../images/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 70px;
+
+    z-index:999;
+
+    background:rgba(10,10,10,.30);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
 
 }
 
-nav{
-
-position:absolute;
-width:100%;
-padding:25px 80px;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-z-index:100;
-
-}
+/* LOGO */
 
 .logo img{
 
-height:70px;
+    width:190px;
 
 }
+
+/* MENU */
 
 nav ul{
 
 display:flex;
-gap:40px;
+
 list-style:none;
+
+gap:35px;
 
 }
 
@@ -50,91 +96,133 @@ text-decoration:none;
 
 font-weight:500;
 
-transition:.3s;
+transition:.35s;
 
 }
 
 nav ul li a:hover{
 
-color:#d8af47;
+color:#d4af37;
 
 }
 
-.contact-btn{
+/* RIGHT */
 
-padding:14px 32px;
-
-background:#cfa73f;
-
-color:black;
-
-font-weight:bold;
-
-text-decoration:none;
-
-border-radius:8px;
-
-}
-
-.hero{
-
-height:100vh;
-
-background:url("../images/hero.jpg") center center;
-
-background-size:cover;
+.right-menu{
 
 display:flex;
 
-justify-content:center;
-
 align-items:center;
 
-position:relative;
+gap:25px;
 
 }
 
-.overlay{
+.languages{
 
-position:absolute;
+display:flex;
 
-width:100%;
-
-height:100%;
-
-background:linear-gradient(to right,rgba(0,0,0,.82),rgba(0,0,0,.25));
+gap:12px;
 
 }
+
+.languages a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:14px;
+
+transition:.3s;
+
+}
+
+.languages a:hover{
+
+color:#d4af37;
+
+}
+
+/* BUTTON */
+
+.contact-button{
+
+padding:14px 28px;
+
+background:#d4af37;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:700;
+
+color:black;
+
+transition:.3s;
+
+}
+
+.contact-button:hover{
+
+transform:translateY(-3px);
+
+background:#e6c55d;
+
+}
+
+/* HERO CONTENT */
 
 .hero-content{
 
 position:relative;
 
-z-index:2;
-
-text-align:center;
-
-color:white;
+z-index:5;
 
 max-width:900px;
+
+padding:0 20px;
+
+}
+
+.subtitle{
+
+display:block;
+
+color:#d4af37;
+
+font-size:20px;
+
+letter-spacing:4px;
+
+margin-bottom:20px;
+
+font-family:'Cinzel',serif;
 
 }
 
 .hero-content h1{
 
-font-size:70px;
+font-size:72px;
 
-font-weight:800;
+font-family:'Cinzel',serif;
+
+font-weight:700;
+
+line-height:1.1;
 
 }
 
 .hero-content h2{
 
-font-size:60px;
-
-color:#d8af47;
+font-size:58px;
 
 margin-top:10px;
+
+color:#d4af37;
+
+font-family:'Cinzel',serif;
 
 }
 
@@ -142,15 +230,17 @@ margin-top:10px;
 
 margin-top:30px;
 
-font-size:22px;
+font-size:20px;
 
-opacity:.9;
+color:#ddd;
 
 }
 
-.buttons{
+/* BUTTONS */
 
-margin-top:50px;
+.hero-buttons{
+
+margin-top:45px;
 
 display:flex;
 
@@ -158,28 +248,108 @@ justify-content:center;
 
 gap:20px;
 
+flex-wrap:wrap;
+
 }
 
-.buttons a{
+.gold-button{
 
-padding:18px 40px;
+background:#d4af37;
 
-background:#cfa73f;
+color:#111;
 
-color:black;
+padding:18px 38px;
 
-font-weight:bold;
+border-radius:50px;
 
 text-decoration:none;
 
-border-radius:8px;
+font-weight:700;
 
 transition:.3s;
 
 }
 
-.buttons a:hover{
+.gold-button:hover{
 
-transform:translateY(-4px);
+transform:translateY(-5px);
+
+}
+
+.transparent-button{
+
+border:2px solid #d4af37;
+
+padding:18px 38px;
+
+border-radius:50px;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+.transparent-button:hover{
+
+background:#d4af37;
+
+color:black;
+
+}
+
+/* SCROLL */
+
+.scroll-down{
+
+position:absolute;
+
+bottom:40px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+.scroll-down span{
+
+display:block;
+
+width:30px;
+
+height:50px;
+
+border:2px solid white;
+
+border-radius:25px;
+
+position:relative;
+
+}
+
+.scroll-down span::before{
+
+content:"";
+
+position:absolute;
+
+top:10px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:6px;
+
+height:6px;
+
+background:white;
+
+border-radius:50%;
 
 }
