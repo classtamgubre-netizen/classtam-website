@@ -428,3 +428,191 @@ padding:20px;
 }
 
 }
+/* =====================================
+   HERO ANİMASYONLARI
+===================================== */
+
+.hero{
+    animation: heroZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom{
+
+    from{
+        background-size:100%;
+    }
+
+    to{
+        background-size:110%;
+    }
+
+}
+
+/* Yazılar */
+
+.hero-top{
+
+    animation:fadeTop 1s ease forwards;
+
+}
+
+.hero-content h1{
+
+    opacity:0;
+    animation:fadeLeft 1s .4s forwards;
+
+}
+
+.hero-content h2{
+
+    opacity:0;
+    animation:fadeRight 1s .8s forwards;
+
+}
+
+.hero-content p{
+
+    opacity:0;
+    animation:fadeUp 1s 1.2s forwards;
+
+}
+
+.hero-buttons{
+
+    opacity:0;
+    animation:fadeUp 1s 1.6s forwards;
+
+}
+
+@keyframes fadeTop{
+
+from{
+
+opacity:0;
+transform:translateY(-40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes fadeLeft{
+
+from{
+
+opacity:0;
+transform:translateX(-60px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateX(0);
+
+}
+
+}
+
+@keyframes fadeRight{
+
+from{
+
+opacity:0;
+transform:translateX(60px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateX(0);
+
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* Hover efektleri */
+
+.hero-buttons a{
+
+box-shadow:0 10px 35px rgba(212,175,55,.25);
+
+}
+
+.hero-buttons a:hover{
+
+box-shadow:0 18px 50px rgba(212,175,55,.55);
+
+}
+
+/* Logo */
+
+.logo img{
+
+transition:.4s;
+
+}
+
+.logo img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* Menü */
+
+nav ul li a{
+
+position:relative;
+
+}
+
+nav ul li a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-8px;
+
+width:0;
+
+height:2px;
+
+background:#d4af37;
+
+transition:.35s;
+
+}
+
+nav ul li a:hover::after{
+
+width:100%;
+
+}
