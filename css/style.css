@@ -616,3 +616,132 @@ nav ul li a:hover::after{
 width:100%;
 
 }
+/*====================================
+ HERO GOLD LIGHT EFFECT
+=====================================*/
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+top:-200px;
+right:-250px;
+
+width:700px;
+height:700px;
+
+background:radial-gradient(circle,
+rgba(212,175,55,.30) 0%,
+rgba(212,175,55,.10) 35%,
+transparent 70%);
+
+filter:blur(35px);
+
+animation:lightMove 12s ease-in-out infinite;
+
+pointer-events:none;
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+left:-300px;
+bottom:-250px;
+
+width:650px;
+height:650px;
+
+background:radial-gradient(circle,
+rgba(255,255,255,.05),
+transparent 70%);
+
+filter:blur(60px);
+
+pointer-events:none;
+
+}
+
+@keyframes lightMove{
+
+0%{
+
+transform:translateX(0) translateY(0);
+
+}
+
+50%{
+
+transform:translateX(-80px) translateY(40px);
+
+}
+
+100%{
+
+transform:translateX(0) translateY(0);
+
+}
+
+}
+
+/*====================================
+ PREMIUM GLASS NAVBAR
+=====================================*/
+
+.navbar{
+
+box-shadow:
+0 10px 35px rgba(0,0,0,.45);
+
+}
+
+/*====================================
+ HERO TITLE SHADOW
+=====================================*/
+
+.hero-content h1{
+
+text-shadow:
+0 5px 20px rgba(0,0,0,.45);
+
+}
+
+.hero-content h2{
+
+text-shadow:
+0 5px 20px rgba(212,175,55,.35);
+
+}
+
+/*====================================
+ BUTTON GLOW
+=====================================*/
+
+.btn-gold{
+
+box-shadow:
+0 15px 45px rgba(212,175,55,.45);
+
+}
+
+.btn-gold:hover{
+
+box-shadow:
+0 20px 60px rgba(212,175,55,.75);
+
+}
+
+/*====================================
+ IMAGE QUALITY
+=====================================*/
+
+.hero{
+
+image-rendering:auto;
+
+}
